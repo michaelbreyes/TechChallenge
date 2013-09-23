@@ -3,6 +3,9 @@
 /* Variables and Mixins */
 $navBgColor: #4260D5;
 $navbarHeight: 175px;
+$shadedColor: #eaeaea;
+$sidebarWidth: 170px;
+$answerTopDistance: 85px;
 
 /* General */
 html, body {
@@ -10,6 +13,8 @@ html, body {
 }
 
 /* Module */
+
+/* Bottom navbar */
 .navbar, .navbar div {
 	height: $navbarHeight;
 	background: $navBgColor;
@@ -40,6 +45,28 @@ html, body {
 	}
 }
 
+/* Sidebar */
+.sidebar-nav {
+	text-align: right;
+	margin-right: 10px;
+	position: absolute;
+	top: $answerTopDistance;
+	right: 10px;
+}
+
+.sidebar-image {
+	width: $sidebarWidth;
+	text-align: right;
+}
+
+.timer {
+	padding: 10px;
+	background: $shadedColor;
+	border-radius: 3px;
+	width: $sidebarWidth;	
+}
+
+/* Main area */
 #main > div {
 	margin: 25px auto;
 }
@@ -49,8 +76,13 @@ html, body {
 	margin: 20px  0 35px 0;
 }
 
+.answers {
+	position: absolute;
+	top: $answerTopDistance;
+}
+
 .answer-group {
-	background: #eaeaea;
+	background: $shadedColor;
 	padding: 20px;
 	font-size: 1.5em;
 	border-radius: 3px;
@@ -80,3 +112,6 @@ html, body {
 
 /* Behaviors */
 
+.relative {
+	position: relative;
+}
