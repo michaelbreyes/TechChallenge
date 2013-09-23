@@ -1,6 +1,82 @@
 @import "bootstrap-sass/lib/bootstrap";
 
-/* Put your CSS here */
+/* Variables and Mixins */
+$navBgColor: #4260D5;
+$navbarHeight: 175px;
+
+/* General */
 html, body {
-    margin: 30px 0;
+	height: 100%;
 }
+
+/* Module */
+.navbar, .navbar div {
+	height: $navbarHeight;
+	background: $navBgColor;
+	color: #ddd;
+
+	.top-spaced {
+		margin-top: 25px;
+	}
+	.title {
+		text-align: right;
+		padding-right: 5px;
+		position: relative;
+		height: $navbarHeight;
+	}
+	.primary {
+		font-size: 28px;
+		display: block;
+	}
+	.regular {
+	}
+	.geneca-logo {
+		width: 150px;
+		border-color: #fff;
+		border-style: solid;
+		border-width: 3px 8px;
+		border-radius: 3px;
+		margin: 5px 2px 5px 5px;
+	}
+}
+
+#main > div {
+	margin: 25px auto;
+}
+
+.question {
+	font-size: 2.6em;
+	margin: 20px  0 35px 0;
+}
+
+.answer-group {
+	background: #eaeaea;
+	padding: 20px;
+	font-size: 1.5em;
+	border-radius: 3px;
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+
+		li {
+			line-height: 1.8em;
+		}
+	}
+}
+
+.answer-option > input {
+	font-size: 30px;
+	margin-right: 10px;
+	position: relative;
+	top: -3px;
+}
+
+.submit {
+	margin-top: 25px;
+	font-size: 24px;
+	height: 1.9em;
+}
+
+/* Behaviors */
+
