@@ -1,0 +1,23 @@
+<div class="question">Determine the answer</div>
+
+<div class="answers">
+    <div class="answer-group">
+        Given the following code is fully executed:
+        <pre>
+a = 5
+b = 10
+a = b = a * b
+a + 5</pre>
+        What is the value of <strong>a</strong>
+        <input id="question3-a" class="right-abs smaller">
+        <br /><br />
+        What is the value of <strong>b</strong>
+        <input id="question3-b" class="right-abs smaller">
+    </div>
+
+    {{#view App.SubmitView}}
+        <button class="submit btn btn-primary">
+            Submit Answer
+        </button>
+    {{/view}}
+</div>

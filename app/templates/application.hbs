@@ -1,9 +1,23 @@
 <div>
+
     <div class="container-fluid" id="main">
-        <div class="row-fluid">
-            {{outlet}}
+        <div class="row-fluid">            
+            <div>
+                <div class="span3 relative">
+                    <div class="sidebar-nav">
+                        <div class="timer">
+                            <span class="timer-text">{{App.Sidebar.durationFormatted}}</span>
+                        </div>
+                        <img {{bindAttr src=App.Sidebar.logo}} class="sidebar-image" />
+                    </div>
+                </div>
+                <div class="span8 relative">            
+                    {{outlet}}
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="navbar navbar-fixed-bottom">
         <div class="navbar-inner">
             <div class="container-fluid">
@@ -19,9 +33,12 @@
                             <img src="images/geneca.png" class="geneca-logo" />
                         </div>
                     </div>
-                    <div class="span9">
-                        <h2>Progress</h2>
-                        {{#linkTo "question1"}}Start{{/linkTo}}
+                    <div class="span8">
+                        {{#linkTo "question1" class="start btn btn-large btn-info"}}Start Challenge{{/linkTo}}
+                        <div id="progress">
+                            {{#each bar in App.ProgressBar.progressbars}}<span {{bindAttr class=":progress bar:done" }}></span>{{/each}}
+                            <span>{{App.ProgressBar.progress}}</span>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,31 @@
+<div class="question">What does the following do</div>
+
+<div class="answers">
+    <div class="answer-group" style="width: 550px;">
+        <pre>
+function fn(x) {
+    if (x &lt;= 1) return x;
+    return fn(x-2) + fn(x-1);
+}</pre>
+        <ul>
+            <li class="answer-option">
+                <input type="radio" name="q8" />
+                Determines the X<sup>th</sup> Fibonacci number
+            </li>
+            <li class="answer-option">
+                <input type="radio" name="q8" />
+                Runs a countdown timer for X seconds
+            </li>
+            <li class="answer-option">
+                <input type="radio" name="q8" />
+                Amortizes the payments for a standard mortgage
+            </li>
+        </ul>
+    </div>
+
+    {{#view App.SubmitView}}
+        <button class="submit btn btn-primary">
+            Submit Answer
+        </button>
+    {{/view}}
+</div>

@@ -1,15 +1,31 @@
 @import "bootstrap-sass/lib/bootstrap";
 
-/* Variables and Mixins */
+/* Variables */
 $navBgColor: #4260D5;
 $navbarHeight: 175px;
 $shadedColor: #eaeaea;
 $sidebarWidth: 170px;
 $answerTopDistance: 85px;
+$imageLogoSize: 110px;
+
+/* Fonts */
+
+@font-face {
+	font-family: PressStart2P;
+	src: url('PressStart2P.ttf');
+}
 
 /* General */
 html, body {
 	height: 100%;
+	clip: auto;
+    overflow-y: hidden;
+}
+
+pre {
+	font-size: 20px;
+	line-height: 1.2em;
+	margin: 12px 0;
 }
 
 /* Module */
@@ -33,8 +49,6 @@ html, body {
 		font-size: 28px;
 		display: block;
 	}
-	.regular {
-	}
 	.geneca-logo {
 		width: 150px;
 		border-color: #fff;
@@ -42,6 +56,40 @@ html, body {
 		border-width: 3px 8px;
 		border-radius: 3px;
 		margin: 5px 2px 5px 5px;
+	}
+}
+
+.start {
+	position: relative;
+	top: -10px;
+}
+
+#progress {
+	background: #fff;
+	background-image: url('/images/stripes.png');
+	height: 38px;
+	border-radius: 3px;
+	margin-top: 16px;
+	.progress {
+		display: inline-block;
+		width: 8.33%;
+		opacity: 0.6;
+		background: #fff;
+		border-radius: 0;
+		height: 100%;
+		margin: 0;
+		&:first-of-type {
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		&:last-of-type,
+		&:nth-of-type(12) {
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+	}
+	.progress.done {
+		background: #28CF16;
 	}
 }
 
@@ -55,15 +103,23 @@ html, body {
 }
 
 .sidebar-image {
-	width: $sidebarWidth;
+	width: $sidebarWidth + 20px;
 	text-align: right;
+	opacity: 0.6;
 }
 
 .timer {
-	padding: 10px;
+	padding: 20px 10px;
 	background: $shadedColor;
 	border-radius: 3px;
-	width: $sidebarWidth;	
+	width: $sidebarWidth;
+	margin-bottom: 10px;
+	font-family: 'PressStart2P';
+	font-size: 32px;
+}
+
+.timer-text {
+	opacity: 0.7;
 }
 
 /* Main area */
@@ -76,16 +132,24 @@ html, body {
 	margin: 20px  0 35px 0;
 }
 
+.less-top {
+	font-size: 2.4em;
+	margin-top: 5px;
+	line-height: 1.1em;
+}
+
 .answers {
 	position: absolute;
 	top: $answerTopDistance;
+	min-width: 400px;
 }
 
 .answer-group {
 	background: $shadedColor;
-	padding: 20px;
+	padding: 15px 20px 5px;
 	font-size: 1.5em;
 	border-radius: 3px;
+	width: 100%;
 
 	ul {
 		list-style: none;
@@ -104,14 +168,64 @@ html, body {
 	top: -3px;
 }
 
+.answer-row {
+	height: 40px;
+	width: 500px;
+}
+
 .submit {
 	margin-top: 25px;
 	font-size: 24px;
 	height: 1.9em;
 }
 
+.image-logo-container {
+	height: $imageLogoSize;
+	width: $imageLogoSize;
+	background: #fff;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+.image-option {
+	height: 140px;
+	margin-right: 25px;
+}
+
+.image-logo {
+	width: 100%;
+}
+
 /* Behaviors */
+
+.inline {
+	display: inline-block;
+	input[type=text] {
+		margin: 5px 25px 15px 0;
+		width: 100px;
+	}
+}
 
 .relative {
 	position: relative;
+}
+
+.right-abs {
+	position: absolute;
+	right: 0;
+}
+
+.right-padded {
+	width: 200px;
+}
+
+.smaller {
+	width: 100px;
+}
+
+.smallest {
+	width: 50px !important;
 }
