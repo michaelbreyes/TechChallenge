@@ -1,5 +1,5 @@
 App.IndexController = Ember.Controller.extend({
-	email: 'mike.reyes@geneca.com',
+	email: '',
 	actions: {
 		viewLoaded: function() {
 			App.Sidebar.stopCountdown();
