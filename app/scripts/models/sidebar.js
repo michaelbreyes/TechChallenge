@@ -4,6 +4,7 @@ App.Objects.Sidebar = Ember.Object.extend({
 	interval: null,
 	duration: 0,
 	logo: '',
+	genecaLogo: 'images/geneca.png',
 	isStarted: false,
 	currentView: null,
 	setView: function(view) {
