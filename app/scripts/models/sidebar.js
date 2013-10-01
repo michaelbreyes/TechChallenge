@@ -2,9 +2,13 @@ App.Objects = App.Objects || {};
 
 App.Objects.Sidebar = Ember.Object.extend({
 	interval: null,
-	duration: 35,
+	duration: 0,
 	logo: '',
 	isStarted: false,
+	currentView: null,
+	setView: function(view) {
+		this.currentView = view;
+	},
 	durationFormatted: function() {
 		return this.get('duration').toMMSS();
 	}.property('duration'),
@@ -19,7 +23,7 @@ App.Objects.Sidebar = Ember.Object.extend({
 			self.set('duration', dur);
 			if (dur <= 0) {
 				clearInterval(self.get('interval'));
-				controller.send('submit');
+				self.currentView.send('transitionOut');
 			}
 		}, 1000));
 	},

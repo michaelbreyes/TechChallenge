@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="span8">
-                        {{#linkTo "question1" class="start btn btn-large btn-info"}}Start Challenge{{/linkTo}}
+                        {{#linkTo "index" class="start btn btn-large btn-info"}}Start Challenge{{/linkTo}}
                         <div id="progress">
                             {{#each bar in App.ProgressBar.progressbars}}<span {{bindAttr class=":progress bar:done" }}></span>{{/each}}
                             <span>{{App.ProgressBar.progress}}</span>

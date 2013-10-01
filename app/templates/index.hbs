@@ -1,3 +1,11 @@
-<div class="well">
-    Welcome to Yeoman and Ember.js!
-</div>
+<h1>Take the Tech Challenge</h1>
+<br />
+
+<fieldset>
+	<h3>Please enter your email address</h3>
+
+	{{view Ember.TextField valueBinding="email"}}
+	<button {{action submit}}>Submit Email</button>
+</fieldset>
+
+<span class="small-font">We will not spam you, promise!</span>

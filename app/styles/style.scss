@@ -28,6 +28,13 @@ pre {
 	margin: 12px 0;
 }
 
+fieldset {
+	border: 1px solid gainsboro;
+	border-radius: 3px;
+	background-color: #E2E2E2;
+	padding: 5px 20px 20px;
+}
+
 /* Module */
 
 /* Bottom navbar */
@@ -193,10 +200,19 @@ pre {
 .image-option {
 	height: 140px;
 	margin-right: 25px;
+	border: 5px solid transparent;
 }
 
 .image-logo {
 	width: 100%;
+}
+
+.score {
+	display: inline-block;
+	padding: 0 5px;
+	font-weight: bolder;
+	font-size: 1.2em;
+	color: green;
 }
 
 /* Behaviors */
@@ -228,4 +244,14 @@ pre {
 
 .smallest {
 	width: 50px !important;
+}
+
+.bordered {
+	border-color: blue;
+}
+
+.small-font {
+	display: block;
+	font-size: 12px;
+	margin-top: 8px;
 }

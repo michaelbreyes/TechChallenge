@@ -1,0 +1,13 @@
+<div class="question">Describe ways to speed up a website</div>
+
+<div class="answers">
+    <div class="answer-group">
+    	{{view Ember.TextArea valueBinding="answer" rows="8" cols="240"}}
+    </div>
+
+    {{#view App.SubmitView}}
+        <button class="submit btn btn-primary">
+            Submit Answer
+        </button>
+    {{/view}}
+</div>

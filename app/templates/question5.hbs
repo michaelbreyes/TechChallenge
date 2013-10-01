@@ -4,10 +4,10 @@
     <div class="answer-group">
         <ul>
             <li class="answer-option">
-                <img src="images/kelly.jpg" class="image-option" />
-                <img src="images/jay.jpg" class="image-option" />
-                <img src="images/ellen.jpg" class="image-option" />
-                <img src="images/oprah.jpg" class="image-option" />
+                <a href="#" {{action imageClick "kelly"}}><img src="images/kelly.jpg" {{bindAttr class=":image-option class1"}}/></a>
+                <a href="#" {{action imageClick "jay"}}><img src="images/jay.jpg" {{bindAttr class=":image-option class2"}}/></a>
+                <a href="#" {{action imageClick "ellen"}}><img src="images/ellen.jpg" {{bindAttr class=":image-option class3"}}/></a>
+                <a href="#" {{action imageClick "oprah"}}><img src="images/oprah.jpg" {{bindAttr class=":image-option class4"}}/></a>
             </li>
         </ul>
     </div>

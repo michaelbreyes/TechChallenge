@@ -1,16 +1,13 @@
 App.Question8Controller = App.BaseController.extend({
 	questionIndex: 8,
-	init: function() {
-		// (timeForQuestion, logoUrl)
-		this.initValues(5, 'images/question1.png');
-	},
+	timerDuration: 25,
+	imageUrl: 'images/question3.jpg',
+	answer: null,
 	actions: {
-		submit: function() {
-			App.Sidebar.stopCountdown();
-
-			// Do storing logic here
-
-			this.transitionToRoute('question9');
+		saveScore: function() {
+			var score = { question: this.questionIndex, points: 0, possible: 20 };
+			if (this.get('answer') == 1) score.points += 20;
+			App.User.saveScore(this.questionIndex, score);
 		}
 	}
 });

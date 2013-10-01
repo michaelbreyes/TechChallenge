@@ -5,39 +5,31 @@
         <ul>
             <li class="answer-option">
                 Relational
-                <select id="db-relational" class="right-abs">
-                    <option value=""></option>
-                    <option value="SQL Server">SQL Server</option>
-                    <option value="Capistrano">Capistrano</option>
-                    <option value="InnoDB">InnoDB</option>
-                </select>
+                {{view Ember.Select
+                       contentBinding="content1"
+                       valueBinding="answer1"
+                       class="right-abs"}}
             </li>
             <li class="answer-option">
                 Document
-                <select id="db-relational" class="right-abs">
-                    <option value=""></option>
-                    <option value="Sharepoint">Sharepoint</option>
-                    <option value="MongoDB">MongoDB</option>
-                    <option value="HBase">HBase</option>
-                </select>
+                {{view Ember.Select
+                       contentBinding="content2"
+                       valueBinding="answer2"
+                       class="right-abs"}}
             </li>
             <li class="answer-option">
                 Key-Value
-                <select id="db-relational" class="right-abs">
-                    <option value=""></option>
-                    <option value="PostgreSQL">PostgreSQL</option>
-                    <option value="Neo4J">Neo4J</option>
-                    <option value="Riak">Riak</option>
-                </select>
+                {{view Ember.Select
+                       contentBinding="content3"
+                       valueBinding="answer3"
+                       class="right-abs"}}
             </li>
             <li class="answer-option">
                 Column-Based
-                <select id="db-relational" class="right-abs">
-                    <option value=""></option>
-                    <option value="Memcached">Memcached</option>
-                    <option value="CouchDB">CouchDB</option>
-                    <option value="Cassandra">Cassandra</option>
-                </select>
+                {{view Ember.Select
+                       contentBinding="content4"
+                       valueBinding="answer4"
+                       class="right-abs"}}
             </li>
         </ul>
     </div>

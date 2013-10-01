@@ -1,4 +1,5 @@
 App.Router.map(function () {
+	this.route("email");
 	this.route("question1");
 	this.route("question2");
 	this.route("question3");
@@ -11,4 +12,5 @@ App.Router.map(function () {
 	this.route("question10");
 	this.route("question11");
 	this.route("question12");
+	this.route("finished");
 });

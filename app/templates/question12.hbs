@@ -1,0 +1,26 @@
+<div class="question">What is a <strong>pull request</strong></div>
+
+<div class="answers">
+    <div class="answer-group" style="width: 580px;">
+        <ul>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q12" selectionBinding="answer" value="1"}}
+                Release the clay pigeon at a shooting range
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q12" selectionBinding="answer" value="2"}}
+                Asking your team to pull the latest code base
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q12" selectionBinding="answer" value="3"}}
+                Asking an open source author to accept your changes into the main codebase
+            </li>
+        </ul>
+    </div>
+
+    {{#view App.SubmitView}}
+        <button class="submit btn btn-primary">
+            Submit Answer
+        </button>
+    {{/view}}
+</div>
