@@ -1,8 +1,25 @@
-<div class="question">Describe ways to speed up a website</div>
+<div class="question">What is the meaning of <strong>YAGNI</strong></div>
 
 <div class="answers">
     <div class="answer-group">
-    	{{view Ember.TextArea valueBinding="answer" rows="8" cols="240"}}
+        <ul>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q1" selectionBinding="answer" value="1"}}
+                Yet Another Google Noop Instruction
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q1" selectionBinding="answer" value="2"}}
+                You Ain't Gonna Need It
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q1" selectionBinding="answer" value="3"}}
+                You're a Good Newbie Interpreter
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q1" selectionBinding="answer" value="4"}}
+                Yo, Always Get New iPhones
+            </li>
+        </ul>
     </div>
 
     {{#view App.SubmitView}}

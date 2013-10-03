@@ -1,31 +1,25 @@
-<div class="question less-top">Name the (hacker culture) movie based on the alternate movie title</div>
+<div class="question less-top">What's the term used when a website adjusts for a desktop browser, tablet, or mobile screen</div>
 
 <div class="answers">
     <div class="answer-group">
-        <div class="answer-row">
-            The Unlucky Number Ground
-            <input type="text" class="right-abs" readonly="readonly" value="The 13th Floor" />
-        </div>
-        <div class="answer-row">
-            Knife Sprinter
-            {{view Ember.TextField valueBinding="answer1" class="right-abs"}}
-        </div>
-        <div class="answer-row">
-            The Multi-dimensional Array
-            {{view Ember.TextField valueBinding="answer2" class="right-abs"}}
-        </div>
-        <div class="answer-row">
-            Goal Unreachable
-            {{view Ember.TextField valueBinding="answer3" class="right-abs"}}
-        </div>
-        <div class="answer-row">
-            Workplace Void
-            {{view Ember.TextField valueBinding="answer4" class="right-abs"}}
-        </div>
-        <div class="answer-row">
-            "Good Citizen" Sports
-            {{view Ember.TextField valueBinding="answer5" class="right-abs"}}
-        </div>
+        <ul>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q7" selectionBinding="answer" value="1"}}
+                Adaptive Design
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q7" selectionBinding="answer" value="2"}}
+                Natural Screenflow
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q7" selectionBinding="answer" value="3"}}
+                Responsive Design
+            </li>
+            <li class="answer-option">
+                {{view Ember.RadioButton name="q7" selectionBinding="answer" value="4"}}
+                Reactive Design
+            </li>
+        </ul>
     </div>
 
     {{#view App.SubmitView}}
